@@ -12,8 +12,8 @@ function calc(op)
                   case '+': displaystr="Addition"; ans=a+b;break;
                   case '-': displaystr="Substraction";ans=a-b;break;
                   case '*':displaystr="Multiplication";ans=a*b;break;
-                  case '/':ans=a/b;break;
-                  case '%':ans=a%b;break;
+                  case '/':displaystr="Division" ;ans=a/b;break;
+                  case '%':displaystr="Mod operator"; ans=a%b;break;
 
               }  
              document.getElementById("Lab1").innerHTML="Result of "+ displaystr +" is "+String(ans);
