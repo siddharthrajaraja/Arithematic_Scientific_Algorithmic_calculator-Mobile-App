@@ -7,21 +7,24 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="css/page1.css">
     <script type="text/javascript" src="js/page1.js"></script>
+    
 </head>
 
     <body background="img/fox.png" style="background-repeat:repeat;background-size:cover; overflow: hidden;" > 
         
         <div class ="content" align ="center"> 
-            <marquee id="one" scrolldelay=0.1 scrollamount=15>ARITHEMATIC-SCIENTIFIC CALCULATOR</marquee>
+            <marquee id="one" scrolldelay=0.1 scrollamount=15>ARITHEMATIC-SCIENTIFIC-ALGORITHMIC CALCULATOR</marquee>
             </div>
-          <br>
+        <br>
         <center>  
           <fieldset style="width: 60px;"> 
             <strong> <i> <legend style="width:relative; font-family:'Courier New', Courier, monospace;">Select Modes!!</legend></i> </strong>
           
-          <div class="grid-container" style="background-color: chartreuse; opacity:0.8;">
+          <div class="grid-container" style="background-color: chartreuse; opacity:0.8; width:auto;">
             <div class="grid-item"><button name="ARITHEMATIC" id="Arithematic" type="button" onclick="choice('ARITHEMATIC')" >Arithematic</button></div>
             <div class="grid-item"><button name="SCIENTIFIC" id="Scientific" type="button" onclick="choice('SCIENTIFIC')" >Scientific</button></div>
+            <div class="grid-item"><button name="ALGORITHMIC" id="Algorithmic" type="button" onclick="choice('ALGORITHMIC')" >Algorithmic</button></div>
+          
           </div>
         </fieldset>
           
@@ -30,7 +33,7 @@
         <br>
       
           <center>
-            <div id="ABOX"  style ="border-radius:20px;" hidden>  
+            <div id="ABOX"  style ="border-radius:20px;"  class="BOX">  
            <div  class="container">   
               <input id="text1" type="text" placeholder="First number!" />
               <br><br>
@@ -56,9 +59,31 @@
           </center>
       
 
+          <center>
+            <div id="ALBOX"  style ="border-radius:20px;" class="BOX">  
+           <div  class="container">   
+              
+          <div class="row">
+              <fieldset><legend>ALGORITHMIC-OPERATIONS</legend>
+              
+                 <button id ="sort_array" type="button" onclick="sorting('sort_array')"  >Sort Array</button><br>
+                <button id ="max_min_in_array"  type="button" onclick="sorting('max_min_in_array')"  >Max_min_in_Array</button>
+                
+
+              </div>
+            
+             </fieldset>   
+            
+          </div> 
+          </div>
+          
+          </center>
+      
+          
 
 
         <br> 
+
      <center>   <footer  style="background-color: purple;width:60%;opacity:0.75;">
             <div align="center">
                 <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:yellow;"><U><I>Developed By:</I></U> </h1>
@@ -72,19 +97,35 @@
       <script>
             function choice(ch)
             {
-              if(ch=="ARITHEMATIC")
-              {     let ele=document.getElementById('ABOX');  
-                    window.alert("ARITHEMATIC MODE ON!!");
-                    console.log(ele);
-                    ele.removeAttribute('hidden');
+              let elear=document.getElementById('ABOX');  
+              let eleal=document.getElementById('ALBOX');  
                     
+              
+              if(ch=="ARITHEMATIC")
+              {     window.alert("ARITHEMATIC MODE ON!!");
+                    console.log(eleal);
+                  elear.style.display='block';
+                  eleal.style.display='none' ; 
               }
               else if (ch=="SCIENTIFIC")
               {
                 window.alert("SCIENTIFIC MODE ON!!");
               }
+              else if(ch=='ALGORITHMIC')
+              {
+                window.alert("ALGORITHMIC MODE ON!!");
+                console.log(elear);
+                eleal.style.display='block';
+                elear.style.display='none' ;
+              }  
+
             }
+
+
       
       </script>
+
+      <script type="text/javascript" src="js/sort.js"></script>
+    
 </body>
 </html>
