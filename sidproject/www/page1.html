@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/page1.css">
+    <script type="text/javascript" src="js/page1.js"></script>
+</head>
+
+    <body background="img/fox.png" style="background-repeat:repeat;background-size:cover; overflow: hidden;" > 
+        
+        <div class ="content" align ="center"> 
+            <marquee id="one" scrolldelay=0.1 scrollamount=15>ARITHEMATIC-SCIENTIFIC CALCULATOR</marquee>
+            </div>
+          <br>
+        <center>  
+          <fieldset style="width: 60px;"> 
+            <strong> <i> <legend style="width:relative; font-family:'Courier New', Courier, monospace;">Select Modes!!</legend></i> </strong>
+          
+          <div class="grid-container" style="background-color: chartreuse; opacity:0.8;">
+            <div class="grid-item"><button name="ARITHEMATIC" id="Arithematic" type="button" onclick="choice('ARITHEMATIC')" >Arithematic</button></div>
+            <div class="grid-item"><button name="SCIENTIFIC" id="Scientific" type="button" onclick="choice('SCIENTIFIC')" >Scientific</button></div>
+          </div>
+        </fieldset>
+          
+        </center>  
+          
+        <br>
+      
+          <center>
+            <div id="ABOX"  style ="border-radius:20px;" hidden>  
+           <div  class="container">   
+              <input id="text1" type="text" placeholder="First number!" />
+              <br><br>
+              <input id="text2" type="text" placeholder="Second number!"/>
+              <br><br>
+              <label id="Lab1" style="height: 50px; width:60px;"></label>
+          </div>   
+              <br>
+              <br>
+      
+          <div class="row">
+              <fieldset><legend>ARITHEMATIC-OPERATIONS</legend>
+              <button id ="add" type="button" onclick="calc('+')"  >+</button>
+              <button id ="sub" type="button"  onclick="calc('-')" >-</button>
+              <button id ="mul" type="button"  onclick="calc('*')" >*</button>
+              <button id ="div" type="button"  onclick="calc('/')" >/</button>
+              <button id ="mod" type="button"  onclick="calc('%')" >%</button>
+               </fieldset>   
+            
+          </div> 
+          </div>
+          
+          </center>
+      
+
+
+
+        <br> 
+     <center>   <footer  style="background-color: purple;width:60%;opacity:0.75;">
+            <div align="center">
+                <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:yellow;"><U><I>Developed By:</I></U> </h1>
+                <h2 style="font-family: cursive;color:cyan;"><strong>SIDDHARTH RAJA</strong></h2>
+            </div>
+    
+        </footer>
+      </center>  
+    
+    
+      <script>
+            function choice(ch)
+            {
+              if(ch=="ARITHEMATIC")
+              {     let ele=document.getElementById('ABOX');  
+                    window.alert("ARITHEMATIC MODE ON!!");
+                    console.log(ele);
+                    ele.removeAttribute('hidden');
+                    
+              }
+              else if (ch=="SCIENTIFIC")
+              {
+                window.alert("SCIENTIFIC MODE ON!!");
+              }
+            }
+      
+      </script>
+</body>
+</html>
