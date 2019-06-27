@@ -1,6 +1,6 @@
 
 function sorting(ch){
-var n=prompt("HOW MANY ELEMENTS IN ARRAY ?")
+var n=prompt("HOW MANY ELEMENTS IN ARRAY ?");
 
 if (n=="")
    location.reload();

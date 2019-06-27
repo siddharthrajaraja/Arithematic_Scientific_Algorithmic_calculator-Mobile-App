@@ -1,6 +1,6 @@
 marquee#one{
     color:yellow;
-    width: 550px;
+    width: auto;
     background-color : indigo;
     font-size: 30px;
     font-family:cursive;
@@ -21,17 +21,17 @@ fieldset legend{
   margin: auto;
   background-color: darkblue;
   color: orange;
-
+    
 }
 
 .grid-container
 {
     
-    display: inline-grid;
+    display: grid;
     grid-template-columns:auto auto auto;
-    padding: 20px;
+    padding: 10px;
     align-content: center;
-    grid-column-gap: 60px;
+    grid-column-gap: auto;
    
 }
 
@@ -49,7 +49,7 @@ fieldset legend{
 
 }
 
-button#max_min_in_array,button#sort_array
+button#max_min_in_array,button#sort_array, button#stack_operations
 {
     border: 0.5px solid gray;
     border-radius: 15px;
