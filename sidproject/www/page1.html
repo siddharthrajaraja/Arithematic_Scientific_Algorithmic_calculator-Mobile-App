@@ -15,15 +15,17 @@
          <center>
             <marquee id="one" scrolldelay=0.1 scrollamount=15>ARITHEMATIC-SCIENTIFIC-ALGORITHMIC CALCULATOR</marquee>
           </center>
-            <br>
+            
+          <br>
+
         <center>  
-          <fieldset style="height: auto; width:50%;"> 
+          <fieldset style="height: auto; width:auto;"> 
             <strong> <i> <legend style="width:relative; font-family:'Courier New', Courier, monospace;">Select Modes!!</legend></i> </strong>
           
-          <div class="grid-container" style="background-color: chartreuse; opacity:0.8;">
-            <div class="grid-item"><button name="ARITHEMATIC" id="Arithematic" type="button" onclick="choice('ARITHEMATIC')" >Arithematic</button></div>
-            <div class="grid-item"><button name="SCIENTIFIC" id="Scientific" type="button" onclick="choice('SCIENTIFIC')" >Scientific</button></div>
-            <div class="grid-item"><button name="ALGORITHMIC" id="Algorithmic" type="button" onclick="choice('ALGORITHMIC')" >Algorithmic</button></div>
+             <div class="grid-container" style="background-color: chartreuse; opacity:0.8;">
+            <div class="grid-item"><button name="ARITHEMATIC" id="Arithematic" type="button" onclick="choice('ARITHEMATIC')" style="color: purple;"> <u>Arithematic</u></button></div>
+            <div class="grid-item"><button name="SCIENTIFIC" id="Scientific" type="button"> <a href="scientific.htm" ><u>Scientific</u></a></button></div>
+            <div class="grid-item"><button name="ALGORITHMIC" id="Algorithmic" type="button" onclick="choice('ALGORITHMIC')" style="color: purple;"><u>Algorithmic</u></button></div>
           
           </div>
         </fieldset>
@@ -66,9 +68,10 @@
           <div class="row">
               <fieldset><legend>ALGORITHMIC-OPERATIONS</legend>
               
-                 <button id ="sort_array" type="button" onclick="sorting('sort_array')"  >Sort Array</button><br>
-                <button id ="max_min_in_array"  type="button" onclick="sorting('max_min_in_array')"  >Max_min_in_Array</button>
-                <button id ="stack_operations"  type="button" onclick="stack()">Stack_operations</button>
+                 <button id ="sort_array" type="button" onclick="sorting('sort_array')" class="button" >Sort Array</button><br>
+                <button id ="max_min_in_array"  type="button" class="button" onclick="sorting('max_min_in_array')"  >Max_min_in_Array</button>
+                <button id ="stack_operations"  type="button" class="button" onclick="stack()">Stack_operations</button>
+                <button id ="queue_operations"  type="button" class="button" onclick="queue()">Linear_Queue_operations</button>
                 
 
               </div>
@@ -108,10 +111,6 @@
                   elear.style.display='block';
                   eleal.style.display='none' ; 
               }
-              else if (ch=="SCIENTIFIC")
-              {
-                window.alert("SCIENTIFIC MODE ON!!");
-              }
               else if(ch=='ALGORITHMIC')
               {
                 window.alert("ALGORITHMIC MODE ON!!");
@@ -128,6 +127,7 @@
 
       <script type="text/javascript" src="js/sort.js"></script>
       <script type="text/javascript" src="js/stacks.js"></script>
+      <script type="text/javascript" src="js/queue.js"></script>
     
 </body>
 </html>
